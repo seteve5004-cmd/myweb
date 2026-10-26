@@ -13,11 +13,22 @@ function noAction(e) {
 e.preventDefault(); // 이벤트의 디폴트 행동 강제취소
 }
 </script>
+
+    <script>
+var sum=0;
+function calc(cBox) {
+if(cBox.checked)
+sum += parseInt(cBox.value);
+else
+sum -= parseInt(cBox.value);
+document.getElementById("sumtext").value = sum;
+}
+</script>
  
 
 </head>
 <body bgcolor="yellow">
-     menu2 page <br>
+     menu2 page 제작 - 2335008 지영규 <br>
   <hr>
   <a href="http://www.naver.com"
 onclick="return query()">
@@ -34,6 +45,21 @@ onclick="return query()">
       
       
   </form>
+        <hr>
+    구매물품 선택 <br>
+    <form>
+<input type="checkbox" name="hap" value="10000"
+onclick="calc(this)">모자 1만원
+<input type="checkbox" name="shose" value="30000"
+onclick="calc(this)">구두 3만원
+<input type="checkbox" name="bag" value="80000"
+onclick="calc(this)">명품가방 8만원<br>
+지불하실 금액 <input type="text" id="sumtext" value="0" >
+</form>
+
+
+
+    
       <a href="index.html"> 홈으로</a><br>
 </body>
 </html>
