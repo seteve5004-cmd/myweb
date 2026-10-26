@@ -15,12 +15,12 @@ e.preventDefault(); // 이벤트의 디폴트 행동 강제취소
 </script>
 
     <script>
-var sum=0;
+var sum=0; //전역변수 선언
 function calc(cBox) {
 if(cBox.checked)
-sum += parseInt(cBox.value);
+sum = sum + parseInt(cBox.value);
 else
-sum -= parseInt(cBox.value);
+sum = sum - parseInt(cBox.value);
 document.getElementById("sumtext").value = sum;
 }
 </script>
