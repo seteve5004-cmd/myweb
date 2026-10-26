@@ -4,7 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>menu2 page</title>
-  menu2 page <br>
+    <script>
+function query() {
+var ret = confirm("네이버로 이동하시겠습니까?");
+return ret; // confirm()의 리턴 값은 true 또는 false
+}
+function noAction(e) {
+e.preventDefault(); // 이벤트의 디폴트 행동 강제취소
+}
+</script>
+ 
+
+</head>
+<body bgcolor="yellow">
+     menu2 page <br>
   <hr>
   <a href="http://www.naver.com"
 onclick="return query()">
@@ -21,9 +34,6 @@ onclick="return query()">
       
       
   </form>
-
-</head>
-<body bgcolor="yellow">
     
 </body>
 </html>
